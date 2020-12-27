@@ -510,17 +510,6 @@ optional = false
 python-versions = "*"
 
 [[package]]
-name = "nb-black"
-version = "1.0.7"
-description = "A simple extension for Jupyter Notebook and Jupyter Lab to beautify Python code automatically using Black."
-category = "dev"
-optional = false
-python-versions = "*"
-
-[package.dependencies]
-ipython = "*"
-
-[[package]]
 name = "nbclient"
 version = "0.5.1"
 description = "A client library for executing notebooks. Formerly nbconvert's ExecutePreprocessor."
@@ -587,6 +576,21 @@ traitlets = ">=4.1"
 [package.extras]
 fast = ["fastjsonschema"]
 test = ["fastjsonschema", "testpath", "pytest", "pytest-cov"]
+
+[[package]]
+name = "nbqa"
+version = "0.5.5"
+description = "Run any standard Python code quality tool on a Jupyter Notebook"
+category = "dev"
+optional = false
+python-versions = ">=3.6.1"
+
+[package.dependencies]
+ipython = ">=7.8.0"
+toml = "*"
+
+[package.extras]
+toolchain = ["black", "flake8", "isort", "mypy", "pylint", "pyupgrade"]
 
 [[package]]
 name = "nest-asyncio"
@@ -1161,7 +1165,7 @@ notebook = ">=4.4.1"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "2b1ee96fb2735425e12b9501bae4e0a60118c5953ae9e06c3490381c5a51d028"
+content-hash = "749bc212f35a2dd773eac5a348140a96877055124472c265c8ced44c33bcb47e"
 
 [metadata.files]
 appdirs = [
@@ -1478,9 +1482,6 @@ mypy-extensions = [
     {file = "mypy_extensions-0.4.3-py2.py3-none-any.whl", hash = "sha256:090fedd75945a69ae91ce1303b5824f428daf5a028d2f6ab8a299250a846f15d"},
     {file = "mypy_extensions-0.4.3.tar.gz", hash = "sha256:2d82818f5bb3e369420cb3c4060a7970edba416647068eb4c5343488a6c604a8"},
 ]
-nb-black = [
-    {file = "nb_black-1.0.7.tar.gz", hash = "sha256:1ca52e3a46675f6a0a6d79ac73a1f8f951bef60f919eced56173e76ab1b6d62b"},
-]
 nbclient = [
     {file = "nbclient-0.5.1-py3-none-any.whl", hash = "sha256:4d6b116187c795c99b9dba13d46e764d596574b14c296d60670c8dfe454db364"},
     {file = "nbclient-0.5.1.tar.gz", hash = "sha256:01e2d726d16eaf2cde6db74a87e2451453547e8832d142f73f72fddcd4fe0250"},
@@ -1492,6 +1493,10 @@ nbconvert = [
 nbformat = [
     {file = "nbformat-5.0.8-py3-none-any.whl", hash = "sha256:aa9450c16d29286dc69b92ea4913c1bffe86488f90184445996ccc03a2f60382"},
     {file = "nbformat-5.0.8.tar.gz", hash = "sha256:f545b22138865bfbcc6b1ffe89ed5a2b8e2dc5d4fe876f2ca60d8e6f702a30f8"},
+]
+nbqa = [
+    {file = "nbqa-0.5.5-py2.py3-none-any.whl", hash = "sha256:6956d0e8e06e22160ce5a5ab1c605601940d39d750069b94c8ed42595b5b9db5"},
+    {file = "nbqa-0.5.5.tar.gz", hash = "sha256:01da850a04f096ef2c96433a2758ebb07eaf6e9b2c9080a27e1c12cefe7acf12"},
 ]
 nest-asyncio = [
     {file = "nest_asyncio-1.4.3-py3-none-any.whl", hash = "sha256:dbe032f3e9ff7f120e76be22bf6e7958e867aed1743e6894b8a9585fe8495cc9"},
