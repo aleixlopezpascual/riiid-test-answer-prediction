@@ -1,4 +1,4 @@
-# osic-pulmonary-fibrosis-progression
+# riiid-test-answer-prediction
 Kaggle competition 2020-12
 
 https://www.kaggle.com/c/riiid-test-answer-prediction
